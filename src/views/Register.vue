@@ -1,76 +1,83 @@
 <template>
-  <v-row>
-    <v-col class="pa-0" cols="12">
-      <v-card class="mx-auto pa-0" color="transparent" dark elevation="0" min-width="200">
-        <v-window v-model="step">
-          <v-window-item :value="1">
-            <v-card-text>
-              <v-text-field
-                class="py-2"
-                hide-details
-                label="First Name"
-                outlined
-                rounded
-                v-model="formData.firstname"
-              ></v-text-field>
-              <v-text-field
-                class="py-2"
-                hide-details
-                label="Last Name"
-                outlined
-                rounded
-                v-model="formData.lastname"
-              ></v-text-field>
-              <v-text-field
-                class="py-2"
-                hide-details
-                label="Team"
-                outlined
-                rounded
-                v-model="formData.team"
-              ></v-text-field>
-              <v-text-field
-                class="py-2"
-                hide-details
-                label="Country"
-                outlined
-                rounded
-                v-model="formData.country"
-              ></v-text-field>
-              <v-text-field
-                class="py-2"
-                hide-details
-                label="Email"
-                outlined
-                rounded
-                v-model="formData.email"
-              ></v-text-field>
-            </v-card-text>
-          </v-window-item>
-
-          <v-window-item :value="2">
-            <div class="pa-4 text-center">
-              <v-img
-                class="mb-4"
-                contain
-                height="128"
-                src="https://cdn.vuetifyjs.com/images/logos/v.svg"
-              ></v-img>
-              <h3 class="title font-weight-light mb-2">Welcome to Vuetify</h3>
-              <span class="caption grey--text">Thanks for signing up!</span>
-            </div>
-          </v-window-item>
-        </v-window>
-
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <!-- <v-btn @click="$router.push({name:'home'})" depressed :disabled="step === 2">กลับ</v-btn> -->
-          <v-btn @click="doSubmit()" color="black" :disabled="step === 2" rounded>ลงทะเบียน</v-btn>
-          <v-spacer></v-spacer>
-        </v-card-actions>
-      </v-card>
-    </v-col>
-  </v-row>
+  <v-container id="register">
+    <v-row justify="center">
+      <v-col cols="12">
+        <div
+          class="text-center subtitle-1 font-weight-bold"
+        >Tipco Asphalt ColasAsia-Oceania Cup 2019</div>
+      </v-col>
+      <v-col cols="12">
+        <!-- name -->
+        <v-row align="center" justify="center">
+          <v-col cols="4">
+            <div class="body-1 text-right">Name</div>
+          </v-col>
+          <v-col class="py-1" cols="7">
+            <v-text-field hide-details outlined single-line v-model="formData.name"></v-text-field>
+          </v-col>
+        </v-row>
+        <!-- team name -->
+        <v-row align="center" justify="center">
+          <v-col cols="4">
+            <div class="body-1 text-right">Team Name</div>
+          </v-col>
+          <v-col class="py-1" cols="7">
+            <v-autocomplete
+              hide-details
+              :items="teams"
+              outlined
+              single-line
+              v-model="formData.teamName"
+            ></v-autocomplete>
+          </v-col>
+        </v-row>
+        <!-- country -->
+        <v-row align="center" justify="center">
+          <v-col cols="4">
+            <div class="body-1 text-right">Country</div>
+          </v-col>
+          <v-col class="py-1" cols="7">
+            <v-autocomplete
+              hide-details
+              :items="countrys"
+              outlined
+              single-line
+              v-model="formData.country"
+            ></v-autocomplete>
+          </v-col>
+        </v-row>
+        <!-- number -->
+        <v-row align="center" justify="center">
+          <v-col cols="4">
+            <div class="body-1 text-right">Number</div>
+          </v-col>
+          <v-col cols="7">
+            <v-autocomplete
+              hide-details
+              :items="numbers"
+              outlined
+              single-line
+              v-model="formData.number"
+            ></v-autocomplete>
+          </v-col>
+        </v-row>
+      </v-col>
+      <v-col cols="10">
+        <div class="text-justify rules-box">{{rules}}</div>
+      </v-col>
+      <v-col cols="4">
+        <v-checkbox color="green" label="CONFIRM" v-model="formData.confirmCheck"></v-checkbox>
+        <v-btn
+          class="title font-weight-bold btn-confirm"
+          @click="doSubmit()"
+          depressed
+          min-height="20"
+          width="100"
+        >confirm</v-btn>
+      </v-col>
+      <div style="height:200px"></div>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
@@ -78,7 +85,17 @@ export default {
   data () {
     return {
       step: 1,
-      formData: []
+      formData: [],
+      teams: ['asd', 'asd2'],
+      countrys: ['asd', 'asd2'],
+      numbers: ['asd', 'asd2'],
+      rules: `
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.`
     }
   },
   computed: {
@@ -94,7 +111,27 @@ export default {
     }
   },
   methods: {
-    doSubmit () {}
+    async doSubmit () {
+      if (!this.formData.confirmCheck) {
+        alert('Please confirm register rules')
+        return 1
+      }
+    }
   }
 }
 </script>
+
+<style lang="scss" scoped>
+#register {
+  padding-bottom: 150px;
+  .btn-confirm {
+    color: #fff402;
+    background-color: #1b7008;
+  }
+  .rules-box {
+    width: 100%;
+    height: 150px;
+    overflow-x: auto;
+  }
+}
+</style>
