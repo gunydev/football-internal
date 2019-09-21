@@ -18,7 +18,7 @@
         </router-link>
       </v-col>
       <v-col cols="12">
-        <router-link style="text-decoration:none" :to="{name: 'about'}">
+        <router-link style="text-decoration:none" :to="{name: 'info'}">
           <v-btn
             class="display-1 font-weight-bold btn-info"
             depressed
