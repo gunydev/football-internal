@@ -1,9 +1,9 @@
 <template>
   <v-app id="app" :style="{ backgroundImage: 'url(' + image + ')' }">
     <div class="logo-bar">
-      <img class="first" height="40" :src="logoMain" />
-      <img class="second" height="20" :src="logoColas" />
-      <img class="third" height="90" :src="logoTipco" />
+      <img class="first" height="50" :src="logoMain" />
+      <img class="second" height="30" :src="logoColas" />
+      <img class="third" height="100" :src="logoTipco" />
     </div>
 
     <v-content>
@@ -47,7 +47,7 @@ export default {
       position: absolute;
       &.first {
         top: 60px;
-        right: 140px;
+        right: 180px;
       }
       &.second {
         top: 70px;
