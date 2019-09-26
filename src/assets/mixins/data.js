@@ -28,7 +28,13 @@ const teams = [
   { country: 'ALL-STAR', name: 'ASIA ALL-STAR TEAM' }
 ]
 
+const teamPlayers = [
+  { teamName: 'KORAT B', playerName: 'Gun Pongsagarn' },
+  { teamName: 'KORAT B', playerName: 'John O coner' }
+]
+
 export default {
   countrys,
-  teams
+  teams,
+  teamPlayers
 }

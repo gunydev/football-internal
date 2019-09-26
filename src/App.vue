@@ -77,4 +77,10 @@ export default {
 .fade-leave-active {
   opacity: 0;
 }
+
+#register {
+  .v-input__control {
+    margin: auto;
+  }
+}
 </style>

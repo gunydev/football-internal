@@ -4,7 +4,7 @@
       <v-col cols="12">
         <div
           class="text-center subtitle-1 font-weight-bold"
-        >Tipco Asphalt ColasAsia-Oceania Cup 2019</div>
+        >Tipco Asphalt-Colas Asia-Oceania Cup 2019</div>
       </v-col>
     </v-row>
     <v-row align="center" justify="center" :key="index" v-for="(item, index) in items">

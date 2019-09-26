@@ -2,7 +2,7 @@
   <v-container id="home">
     <v-row class="mb-8">
       <v-col class="text-center px-2" cols="12">
-        <div class="display-1 font-weight-bold">Tipco Asphalt Colas</div>
+        <div class="display-1 font-weight-bold">Tipco Asphalt-Colas</div>
         <div class="display-1 font-weight-bold">Asia-Oceania Cup 2019</div>
       </v-col>
     </v-row>

@@ -7,15 +7,6 @@
         >Tipco Asphalt ColasAsia-Oceania Cup 2019</div>
       </v-col>
       <v-col cols="12">
-        <!-- name -->
-        <v-row align="center" justify="center">
-          <v-col cols="4">
-            <div class="body-1 text-right">Name</div>
-          </v-col>
-          <v-col class="py-1" cols="7">
-            <v-text-field hide-details outlined single-line v-model="formData.name"></v-text-field>
-          </v-col>
-        </v-row>
         <!-- country -->
         <v-row align="center" justify="center">
           <v-col cols="4">
@@ -49,10 +40,48 @@
             ></v-autocomplete>
           </v-col>
         </v-row>
+        <!-- name -->
+        <v-row align="center" justify="center">
+          <v-col cols="4">
+            <div class="body-1 text-right">Name</div>
+          </v-col>
+          <v-col class="py-1" cols="7">
+            <v-autocomplete
+              hide-details
+              :items="filterTeamPlayers"
+              item-text="playerName"
+              item-value="playerName"
+              outlined
+              :readonly="formData.teamName ? false : true"
+              ref="nameSelect"
+              single-line
+              v-if="!jounery"
+              v-model="formData.name"
+            ></v-autocomplete>
+            <v-text-field
+              hide-details
+              outlined
+              placeholder="Enter your name here.."
+              ref="nameInput"
+              single-line
+              v-else
+              v-model="formData.name"
+            ></v-text-field>
+          </v-col>
+          <v-col class="py-0" cols="8" offset="3">
+            <v-checkbox
+              @change="checkCannotFindName($event)"
+              color="green"
+              label="Cannot find your name?"
+              v-model="jounery"
+            ></v-checkbox>
+          </v-col>
+        </v-row>
+
         <!-- number -->
         <v-row align="center" justify="center">
           <v-col cols="4">
-            <div class="body-1 text-right">Number</div>
+            <div class="body-1 text-right">Jersey No.</div>
           </v-col>
           <v-col cols="7">
             <v-autocomplete
@@ -68,8 +97,8 @@
       <v-col cols="10">
         <div class="text-justify rules-box">{{rules}}</div>
       </v-col>
-      <v-col cols="4">
-        <v-checkbox color="green" label="CONFIRM" v-model="formData.confirmCheck"></v-checkbox>
+      <v-col class="text-center" cols="12">
+        <v-checkbox color="green" label="Read and approved" v-model="formData.confirmCheck"></v-checkbox>
         <v-btn
           class="title font-weight-bold btn-confirm"
           @click="doSubmit()"
@@ -89,10 +118,12 @@ import dataFeed from '../assets/mixins/data'
 export default {
   data () {
     return {
+      jounery: false,
       loading: false,
       formData: [],
       teams: dataFeed.teams,
       countrys: dataFeed.countrys,
+      teamPlayers: dataFeed.teamPlayers,
       numbers: [1, 2, 3, 4, 5, 6, 7],
       rules: `
       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
@@ -116,10 +147,19 @@ export default {
     },
     filterTeam () {
       return this.teams.filter(i => i.country === this.formData.country)
+    },
+    filterTeamPlayers () {
+      return this.teamPlayers.filter(i => i.teamName === this.formData.teamName)
     }
   },
   async created () {},
   methods: {
+    checkCannotFindName (e) {
+      this.$nextTick(() => {
+        if (e) return this.$refs.nameInput.focus()
+        this.$refs.nameSelect.focus()
+      })
+    },
     async doSubmit () {
       if (!this.formData.confirmCheck) {
         alert('Please confirm register rules')
