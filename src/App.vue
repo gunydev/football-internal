@@ -1,8 +1,6 @@
 <template>
   <v-app id="app" :style="{ backgroundImage: 'url(' + image + ')' }">
     <div class="logo-bar">
-      <img class="first" height="50" :src="logoMain" />
-      <img class="second" height="30" :src="logoColas" />
       <img class="third" height="100" :src="logoTipco" />
     </div>
 
@@ -18,8 +16,6 @@
 export default {
   name: 'App',
   data: () => ({
-    logoMain: require('./assets/icon/logo.jpg'),
-    logoColas: require('./assets/icon/colas.jpg'),
     logoTipco: require('./assets/icon/tipco.jpg'),
     image: require('./assets/bg-tipco-1.jpg')
   })
@@ -27,6 +23,9 @@ export default {
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sriracha&display=swap');
+
 @import url('https://fonts.googleapis.com/css?family=Sarabun&display=swap');
 #app {
   font-family: 'Sarabun', sans-serif !important;
@@ -82,5 +81,12 @@ export default {
   .v-input__control {
     margin: auto;
   }
+}
+
+.signature {
+  font-family: 'Dancing Script', cursive, 'Sriracha';
+  font-size: 22px;
+  font-weight: bold;
+  color: black;
 }
 </style>
