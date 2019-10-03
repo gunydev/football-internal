@@ -26,9 +26,13 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Sriracha&display=swap');
 
-@import url('https://fonts.googleapis.com/css?family=Sarabun&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Sarabun&display=swap');
+@font-face {
+  font-family: 'Franklin';
+  src: url('/src/assets/font/Franklin.tff') format('tff');
+}
 #app {
-  font-family: 'Sarabun', sans-serif !important;
+  font-family: 'Franklin', sans-serif !important;
   width: 100%;
   // background-attachment: fixed;
   background-position: top;

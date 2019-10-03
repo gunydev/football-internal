@@ -36,7 +36,8 @@
               >{{item.welcome_kit}}</div>
             </template>
             <template v-slot:item.liability="{ item }">
-              <v-icon>zoom</v-icon>
+              <!-- <v-icon>save_alt</v-icon> -->
+              <div class="caption">coming soon...</div>
             </template>
           </v-data-table>
         </v-col>

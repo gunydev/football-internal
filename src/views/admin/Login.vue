@@ -4,12 +4,12 @@
       <v-col cols="12" md="4" sm="8">
         <v-card class="elevation-12">
           <v-toolbar color="primary" dark flat>
-            <v-toolbar-title>Login form</v-toolbar-title>
+            <v-toolbar-title>Login</v-toolbar-title>
             <div class="flex-grow-1"></div>
           </v-toolbar>
           <v-card-text>
             <v-form lazy-validation ref="form" v-model="valid">
-              <v-text-field label="E-mail" required :rules="emailRules" v-model="email"></v-text-field>
+              <v-text-field autofocus label="E-mail" required :rules="emailRules" v-model="email"></v-text-field>
               <v-text-field
                 clearable
                 id="password"
