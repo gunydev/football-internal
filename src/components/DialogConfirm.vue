@@ -14,9 +14,20 @@
             <v-window-item :value="1">
               <v-card-text class="pb-0">
                 <v-row class="text-center" justify="center">
-                  <v-col cols="12">
-                    <div class="display-1 font-weight-bold black--text">Welcome Letter</div>
-                    <v-img aspect-ratio="1" cover :src="require('../assets/celebrate.png')"></v-img>
+                  <v-col class="text-justify" cols="12">
+                    <p class="display-1 font-weight-bold black--text">Welcome Letter</p>
+                    <p>
+                      <strong>Dear</strong> Athletes and Participants,
+                    </p>
+                    <p>
+                      <strong>Welcome to Bangkok, Thailand!</strong>
+                    </p>
+                    <p>As we are delighted to host the Tipco &ndash; Colas Asia Oceania Cup 2019 and give a warm welcome to the 16 teams from 8 countries to Thailand,</p>
+                    <p>we hope that this tournament will help promote our group&rsquo;s team spirit and solidarity.</p>
+                    <p>We wish that you all will have a very memorable day, show of great sportsmanship, fair play and free of injury. Please have a pleasant stay and enjoy your time with us here in Bangkok.</p>
+                    <div class="font-weight-bold">Sincerely Yours,</div>
+                    <div class="font-weight-bold">Mr. Chaiwat Srivalwat</div>
+                    <div class="font-weight-bold">Chief Executive Office</div>
                   </v-col>
                 </v-row>
               </v-card-text>
