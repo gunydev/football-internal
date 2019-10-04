@@ -136,7 +136,8 @@ export default {
     },
     date () {
       var d = new Date()
-      return `(${d.getDate()}/${d.getMonth()}/${d.getFullYear()})`
+      let date = d.getDate(); let month = d.getMonth() + 1; let year = d.getFullYear()
+      return `(${date}/${month}/${year})`
     }
   },
   methods: {
