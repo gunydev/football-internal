@@ -171,11 +171,29 @@ export default {
         },
         {
           name: 'Rules & Regulations',
-          link: 'https://firebasestorage.googleapis.com/v0/b/football-internal.appspot.com/o/Rules-Regulations-Asia-Oceania-Cup.pdf?alt=media&token=4e2ef238-bafb-4a87-bcc6-243d06c5ef3f'
+          link:
+            'https://firebasestorage.googleapis.com/v0/b/football-internal.appspot.com/o/Rules-Regulations-Asia-Oceania-Cup.pdf?alt=media&token=4e2ef238-bafb-4a87-bcc6-243d06c5ef3f'
         },
         {
           name: 'Event Program',
-          link: 'https://firebasestorage.googleapis.com/v0/b/football-internal.appspot.com/o/Tipco-draw-2019.pdf?alt=media&token=7139c17f-f0e0-48aa-a2d5-4d211973f33a'
+          link:
+            'https://firebasestorage.googleapis.com/v0/b/football-internal.appspot.com/o/Tipco-draw-2019.pdf?alt=media&token=7139c17f-f0e0-48aa-a2d5-4d211973f33a'
+        },
+        {
+          name: 'Match schedule group A',
+          link: 'https://firebasestorage.googleapis.com/v0/b/football-internal.appspot.com/o/A.jpg?alt=media&token=35b9650a-cfa1-4f04-80f9-ead3560a73dc'
+        },
+        {
+          name: 'Match schedule group B',
+          link: 'https://firebasestorage.googleapis.com/v0/b/football-internal.appspot.com/o/B.jpg?alt=media&token=10139b19-8c76-4861-ab59-fac46c37e3f3'
+        },
+        {
+          name: 'Match schedule group C',
+          link: 'https://firebasestorage.googleapis.com/v0/b/football-internal.appspot.com/o/C.jpg?alt=media&token=00050cf2-cb6e-4af1-b759-49ae996c0c40'
+        },
+        {
+          name: 'Match schedule group D',
+          link: 'https://firebasestorage.googleapis.com/v0/b/football-internal.appspot.com/o/D.jpg?alt=media&token=a679a8d0-079d-4f2d-ab8c-aed2221989a5'
         }
       ]
     }
