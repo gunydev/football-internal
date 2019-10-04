@@ -400,87 +400,59 @@ const teamPlayers = [
   { teamName: 'Asia All-Stars', playerName: 'Sakda Phanklang', type: 'Main' }
 ]
 
-const rules = `
-  <p style="text-align: center;"><strong>ANNEX 2 - <u>FIVE-A-SIDE SOCCER RULES</u></strong></p>
-  <p><strong><u>1- GENERAL</u></strong></p>
-  <p>Five-a-side soccer is a type of soccer played with five players and two replacements (four players on the field and one goalkeeper) on a reduced-size pitch (15 to 20 m wide and 25 to 30 m long) in a special sports hall or outdoors.</p>
-  <p>The aim is to score more goals than the opponent in two 15-minute halves.</p>
-  <p><strong><u>2- SPORTS ORGANIZATION</u></strong></p>
-  <p>The competition is reserved solely for players aged at least 18 years (on the day of the tournament).</p>
-  <p>It is open to men and women with no particular restrictions.</p>
-  <p><strong><u>3- FORMAT OF THE TOURNAMENTS</u></strong></p>
-  <p>The bodies organizing the competition are requested to work in a table format with male, female and mixed teams.</p>
-  <p><strong><u>4- FAIR PLAY</u></strong></p>
-  <p>The teams and the referee must shake hands BEFORE and AFTER the match.&nbsp;</p>
-  <p>The referee may award a fair play point to each team at the end of the match during group matches according to their behavior and compliance with the rules.</p>
-  <p>This point will be added to the points acquired during the matches and will therefore be taken into account in establishing the overall team ranking.</p>
-  <p><strong><u>5- POINTS PER MATCH</u></strong></p>
-  <p>Points will be awarded as follows during group matches for each stage:</p>
-  <p>4 points for winning / 2 points for a draw / 0 points for losing.</p>
-  <p><strong><u>6- BONUS POINTS</u></strong></p>
-  <p><strong>Offensive bonus</strong></p>
-  <p>1 additional point will be allocated during group matches to the winning team if it wins by more than 2 goals (i.e. different by at least 3 goals).&nbsp;</p>
-  <p><strong>Defensive bonus</strong></p>
-  <p>1 additional point will be allocated during group matches to the losing team if it loses by only one goal.</p>
-  <p>This point will be added to the points acquired during matches and to the fair play points to establish the ranking.</p>
-  <p><strong><u>7- FIELD</u></strong>&nbsp;</p>
-  <p>Field dimensions: 15 to 20 m wide and 25 to 30 m long.</p>
-  <p>Goal dimensions: 3m X 2m.</p>
-  <p><strong><u>8- KICK-OFF</u></strong></p>
-  <p>Lots will be drawn to decide which team will kick off.</p>
-  <p>A match kicks off with a back pass from the center mark of the field.</p>
-  <p><strong><u>9- NETS AND DEMARCATED AREAS</u>&nbsp;</strong></p>
-  <p>There is no offside.</p>
-  <p>A corner kick can be awarded to a team when a member of the opposing team touches the ball and the latter is released in the nets behind the goals.</p>
-  <p>In the case of a corner kick, throw-in, free kick or goal clearance, the ball is returned to the goalkeeper of the team entitled to benefit.</p>
-  <p>Defensively, if a waiting or stationary position prevents a goal, the foul will be penalized.</p>
-  <p><strong><u>10- GOALKEEPER</u></strong></p>
-  <p>The goalkeeper is not allowed to leave his/her penalty area.</p>
-  <p>The goalkeeper may not directly score with his/her hand.</p>
-  <p>When the goalkeeper receives a back pass from one of his/her team-mates, the latter is not allowed to take the ball with his/her hands and this will be treated as a foul. The ball will then be returned to the goalkeeper of the opposing team.</p>
-  <p>The goalkeeper may clear the ball either with his/her hand or foot with the ball on the ground.</p>
-  <p>The goalkeeper may not keep the ball in his/her hand more than 3 seconds. If he does, a whistle will be blown for a foul and the ball will be returned to the goalkeeper of the opposing team. Repeated fouls will be penalized.</p>
-  <p><strong><u>11- TEAMS</u></strong></p>
-  <p>A team consists of 5 players on the field and 2 replacements. Each of the teams must appoint a captain.</p>
-  <p>Replacements can be made at any time during the match without restriction.</p>
-  <p>The referee must ensure that the player leaves the field before his/her replacement enters it.</p>
-  <p>Each player may become goalkeeper or vice versa during the match at the time of the replacements, which are notified and approved by the referee. Studs may not be worn.</p>
-  <p>Players are advised to wear shin guards.&nbsp;</p>
-  <p>Before the beginning of a match, each player must make sure that he is not wearing any jewel, ring, chain or earring.</p>
-  <p><strong><u>12- MATCH DURATION</u></strong></p>
-  <p>Matches are played in two 15-minute halves.</p>
-  <p>In the event of a draw in knockout games, 3 shots will be played from the penalty mark to decide between the two teams. In the event of a draw after the penalty shot, a sudden death round will be held between the teams. During this round, each team must play the same number of shots from the penalty mark so that one of the two can be designated as the winner.&nbsp;</p>
-  <p>A match can be extended at the discretion of the referee following deliberate time wasting by one team, on examination of an injury or on transfer of an injured player from the field.</p>
-  <p><strong><u>13- REFEREE</u></strong></p>
-  <p>Each match takes place under the supervision of a main referee with all the authority required to ensure compliance with the rules of the game in the course of the match he is required to supervise.</p>
-  <p>A linesman is present at each match, in charge of counting points and fouls, checking replacements, checking when the ball goes outside the touchline (when the ball touches the nets) and helping the main referee during penalty shootouts.</p>
-  <p>The team captain is the only team member allowed to speak to the referee up to the end of the match (the captain must identify himself to the referee at the beginning of the match).</p>
-  <p>The referee reserves the right to decide on the penalty level with which to penalize the player.</p>
-  <p>Respect for the referee is essential and any dispute can be penalized. Outflanking is not allowed.</p>
-  <p>The referee can penalize a player with a yellow card (sent off for 3 minutes without replacement) or by a red card (sent off from the match until the end without replacement) if he considers this necessary. Two yellow cards in one and the same match result in a red card. A player penalized with a red card during a match is not excluded from the competition. A maximum number of three red cards during the Colas Team Cup is allowed. A player exceeding this number of red cards will be fully eliminated from the Colas Team Cup.&nbsp;</p>
-  <p>The referee must:</p>
-  <ul>
-  <li>ensure compliance with the rules of the game;</li>
-  <li>supervise the match;</li>
-  <li>ensure that the players' equipment meets the requirements.&nbsp;</li>
-  </ul>
-  <p><strong><u>14- FOULS</u></strong>&nbsp;</p>
-  <p>When the referee calls a foul, the ball is returned to the goalkeeper of the team against which the foul is committed except in the case of a penalty.&nbsp;</p>
-  <p>Tackles and rough play are prohibited. They are automatically sanctioned as fouls (the ball is returned to the goalkeeper) or a penalty depending on the level of danger of the tackle, which is left to the discretion of the referee.</p>
-  <p>All fouls are counted for each team and a penalty will be automatically imposed as from the third collective foul.</p>
-  <p>The foul count for the penalized team is then reset to zero.</p>
-  <p>In the event of excessively rough behavior during the match, the referee may send off the player in question (yellow card = sent off for 3 minutes without replacement, red card = player sent off for the rest of the match without replacement).</p>
-  <p><strong><u>15- PENALTIES AND SHOOTOUTS</u></strong></p>
-  <p>Penalties and shootouts will take place in the form of a duel between the goalkeeper of the penalized team and a member of the opposing team.</p>
-  <p>The player then moves away from the center circle and must attempt a shot outside the penalty area within a maximum of 5 seconds to score.</p>
-  <p>He only has the right to one shot, with no possibility of bouncing off the sides or of resuming the shot after being stopped by the referee.</p>
-  <p>The referee may move around the entire penalty area as he sees fit.</p>
-  <p>During a penalty shootout, all other players must be located in the opposing team's part of the field and the referee must ensure that this rule is observed to prevent disruption of the game.</p>
-  <p><strong><u>16- LIABILITY</u></strong>&nbsp;</p>
-  <p>All athletes undertake to notify the organizing bodies of any change that may take place in their state of health since the date of the medical certificate that enabled them to confirm their registration.</p>
-  <p>In the event of an accident linked to physical incapacity, particularly of cardiac origin, players undertake not to incur the liability of the Colas Team Cup organizing bodies.</p>
-  <p>All athletes declare that they are familiar with this rule and the in -house rules of the sports center in which the events take place and undertake to accept and comply strictly with their terms, failing which they will incur the penalties stipulated by the aforementioned rules.</p>
-  <p>&nbsp;</p>`
+const rules = `<div>
+<div style="text-align: center;"><strong>TIPCO ASPHALT - COLAS</strong></div>
+<div style="text-align: center;"><strong>ASIA - OCEANIA </strong><strong>CUP 2019</strong></div>
+<div style="text-align: center;"><strong>FIVE-A-SIDE FOOTBALL RULES</strong></div>
+<ol>
+<li><u><u> General<br /></u></u>
+<ul>
+<li>5-a-side soccer is a type of soccer played with 5 players <br /> (4 players on the field + 1 goalkeeper) and 2 substitutes</li>
+<li>Replacements can be made at any time during the match without restriction</li>
+<li>Playing on a reduced-size pitch (20 m. wide and 30 m. long)</li>
+</ul>
+The aim is to score more goals than the opponent in two 15-minute halves.<br /><br /><u></u></li>
+<li><u> Sports Organization<br /></u>The competition is reserved solely for players <br /> aged at least 18 years (on the day of the tournament) It is open to men and women with no restrictions.<br /><br /></li>
+<li><u> Fair play prize<br /></u>The teams and the referee must shake hands BEFORE and AFTER he match <br />The referee may award a fair play point to each team <br />At the end of the match during group matches according to their behavior and compliance with the rules.<br /><br /></li>
+<li><u><u> Points per match<br /></u></u>Points will be awarded as follows during group matches for each stage: 4 points for winning / 2 points for a draw / 0 points for losing.<br />WIN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp; Points<br />DRAW&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; Points<br />LOSE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; Points<br /><u><strong>&ldquo;NO BONUS POINTS AND DEFENSIVE BONUS&rdquo;</strong></u></li>
+<li><u><u> Field<br /></u></u>
+<p>Field dimensions <br />20 m. wide X 30 m. long <br />Goal dimensions <br />3m. X 2m.</p>
+</li>
+<li><u> Kick Off<br /></u>A coin is tossed and the team that wins the toss will kick off. <br />A match kicks off with a back pass from the center mark of the field.<br /><br /></li>
+<li><u> Nets and Demarcated Areas<br /></u>There is no offside. A corner kick can be awarded to a team when a <br /> member of the opposing team touches the ball and the latter is released in the nets behind the goals. Ball throw in from sideline by kick but cannot make a goal Defensively, if a waiting or stationary position prevents a goal, the foul will be penalized.<br /><br /></li>
+<li><u><u> Goal Keepers<br /></u></u>
+<ul>
+<li>The goalkeeper is not allowed to leave his/her penalty area.</li>
+<li>The goalkeeper may not directly score with his/her hand.</li>
+<li>When the goalkeeper receives a back pass from one of his/her team-mates, the latter is not allowed to take the ball with his/her hands and this will be treated as a foul. The ball will then be returned to the goalkeeper of the opposing team.</li>
+<li>The goalkeeper may clear the ball either with his/her hand or foot with the ball on the ground.</li>
+<li>The goalkeeper may not keep the ball in his/her hand more than</li>
+</ul>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; 5 seconds. If he does, a whistle will be blown for a foul and the ball will be returned to the goalkeeper of the opposing team. Repeated fouls will be penalized.</p>
+</li>
+<li><u><u> Teams<br /></u></u>
+<ul>
+<li>A team consists of 5 players on the field and 2 replacements.</li>
+<li>Each of the teams must appoint a captain.</li>
+<li>Replacements can be made at any time during the match <br /> without restriction.</li>
+</ul>
+&nbsp; &nbsp; &nbsp; &nbsp; The referee must ensure that the player leaves the field before his/her replacement enters it.Each player may become goalkeeper or vice versa during the match at the time of the replacements, which are notified and approved by the referee. Players are advised to wear shin guards. Before the beginning of a match, each player must make sure that he is not wearing any jewel, ring, chain or earring.</li>
+<li><u><u> Match duration<br /></u></u>
+<ul>
+<li>Matches are played in two 15-minute halves.</li>
+<li>In the event of a draw in knockout games, 3 shots</li>
+<li>will be played from the penalty mark to decide between <br /> the two teams.</li>
+</ul>
+&nbsp; &nbsp; &nbsp; &nbsp; In the event of a draw after the penalty shot, a sudden death round will be held between the teams.<br />During this round, each team must play the same number of shots from the penalty mark so that one of the two can be designated as the winner. <br />A match can be extended at the discretion of the referee following deliberate time wasting by one team, on examination of an injury or on transfer of an injured player from the field.</li>
+<li><u> Referee<br /></u>- Each match takes place under the supervision of a main referee with all the authority required to ensure compliance with the rules of the game in the course of the match he is required to supervise. <br />- A linesman is present at each match, in charge of counting points and fouls, checking replacements, checking when the ball goes outside the touchline (when the ball touches the nets) and helping the main referee during penalty shootouts.<br />- The team captain is the only team member allowed to speak to the referee up to the end of the match (the captain must identify himself to the referee at the beginning of the match). <br />- The referee reserves the right to decide on the penalty level with which to penalize the player.<br />- Respect for the referee is essential and any dispute can be penalized. Outflanking is not allowed. <br />- The referee can penalize a player with a yellow card (sent off for 3 minutes without replacement) or by a red card (sent off from the match until the end without replacement) if he considers this necessary. <br />Two yellow cards in one and the same match result in a red card. <br />- A player penalized with a red card during a match is not excluded from the competition. <br />- A maximum number of 2 red cards during the Asia Oceania Cup <br /> is allowed. <br />- A player exceeding this number of red cards will be fully eliminated from the Asia Oceania Cup<br />- The referee must; <br /> - ensure compliance with the rules of the game <br /> - supervise the match<br /> - ensure that the players' equipment meets the requirements.</li>
+<li><u> Fouls<br /></u>- When the referee calls a foul, free kick is awarded to the opposing team, to be taken from the place where a foul occurred<br />- Tackles and rough play are prohibited. They are automatically sanctioned as fouls (the ball is returned to the goalkeeper) or a penalty depending on the level of danger of the tackle, which is&nbsp;left to the discretion of the referee.<br />- All fouls are counted for each team and a penalty will be automatically imposed as from the third collective foul. <br />- The foul count for the penalized team is then reset to zero. <br />- In the event of excessively rough behavior during the match, the referee may send off the player in question (yellow card = sent off for 3 minutes without replacement, red card = player sent off for the rest of the match without replacement).</li>
+<li><u><u> Penalty shootouts<br /></u></u>Penalty shootouts will apply the normal FIFA rules&nbsp;</li>
+<li><u> </u><u><u>Liability<br /></u></u>All athletes undertake to notify the organizing bodies of any change that may take place in their state of health since the date of the medical certificate that enabled them to confirm their registration. In the event of an accident linked to physical incapacity, particularly of cardiac origin, players undertake not to incur the liability of the Colas Team Cup organizing bodies. All athletes declare that they are familiar with this rule and the in-house rules of the sports center in which the events take place and undertake to accept and comply strictly with their terms, failing which they will incur the penalties stipulated by the&nbsp; aforementioned rules.</li>
+<li>
+<p><span style="text-decoration: underline;">If point are equal point more than 1 team on qualifier the rules are</span><br />1.Head-to-head records (Results and points) total<br />2.Goal difference<br />3.Total goals scored<br />4.Fair play points (yellow card, red card)<br />5.Draw</p>
+</li>
+<li><u><u> Yellow &amp; Red calculation<br /></u></u>-1 yellow card = 1 point<br />-Doubled yellow card = 2 points<br />-Direct red card = 3 points<br />-1 yellow card and direct red card = 4 points</li>
+</ol></div>`
 
 const liability = `<div>
   <div style="text-align: center; font-size:1.2rem; color:black; line-height:1.8rem"><strong>Tipco Asphalt-Colas </strong></div>
