@@ -101,7 +101,7 @@
             </v-col>
             <v-col cols="7">
               <v-text-field
-                :disabled="isRepesent === 'Main' ? false: true"
+                :disabled="isRepesent === 'Representative' ? true: false"
                 hide-details
                 outlined
                 single-line
@@ -235,10 +235,10 @@ export default {
         return 0
       }
       this.loading = !this.loading
-      const id = await this.getLastId()
+      // const id = await this.getLastId()
       const dateTime = await this.getDate()
       const football = {
-        id: id + 1,
+        // id: 'none',
         name: this.name,
         team: this.teamName,
         country: this.country,
