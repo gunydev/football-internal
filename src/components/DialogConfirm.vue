@@ -14,7 +14,7 @@
             <v-window-item :value="1">
               <v-card-text class="pb-0">
                 <v-row class="text-center" justify="center">
-                  <v-col class="text-justify" cols="12">
+                  <v-col class="text-left" cols="12">
                     <p class="display-1 font-weight-bold black--text">Welcome Letter</p>
                     <p>
                       <strong>Dear</strong> Athletes and Participants,
@@ -28,6 +28,7 @@
                     <div class="font-weight-bold">Sincerely Yours,</div>
                     <div class="font-weight-bold">Mr. Chaiwat Srivalwat</div>
                     <div class="font-weight-bold">Chief Executive Office</div>
+                    <div class="caption font-weight-bold">Tipco Asphalt Public Company Limited</div>
                   </v-col>
                 </v-row>
               </v-card-text>
@@ -61,7 +62,7 @@
                     <div class="display-1">Welcome Kits</div>
                   </v-col>
                   <v-col class="pt-0" cols="8">
-                    <v-checkbox hide-details label="Confirm By Staff" v-model="isConfirm"></v-checkbox>
+                    <v-checkbox hide-details label="Received" v-model="isConfirm"></v-checkbox>
                   </v-col>
                 </v-row>
               </v-card-text>
@@ -131,7 +132,7 @@ export default {
           return 'Liability Waiver <br>and Release'
 
         default:
-          return 'Congratulations !!'
+          return 'Congratulations 🎉'
       }
     },
     date () {

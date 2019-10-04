@@ -132,8 +132,10 @@
 
       <v-col cols="8">
         <li :key="item.name" v-for="item in pdfs">
-          <a class="caption" :href="item.link" target="blank">{{item.name}}</a>
+          <a class="caption" v-if="item.type=== 'web'" :href="item.link" target="blank">{{item.name}}</a>
         </li>
+          <a  class="caption" href="/public/Rules-Regulations-Asia-Oceania-Cup.pdf"
+          download="Rules-Regulations-Asia-Oceania-Cup.pdf">Rules & Regulations</a>
       </v-col>
     </v-row>
   </v-container>
@@ -141,10 +143,12 @@
 
 <script>
 import dataFeed from '../assets/mixins/data'
+import pdf from 'vue-pdf'
 const DialogConfirm = () => import('../components/DialogConfirm')
 export default {
   components: {
-    DialogConfirm
+    DialogConfirm,
+    pdf: PDFViewer
   },
   data () {
     return {
@@ -166,16 +170,19 @@ export default {
       logoColas: require('../assets/icon/colas.jpg'),
       pdfs: [
         {
-          name: 'Tourismthailand',
-          link: 'https://www.tourismthailand.org/home'
+          name: 'Tourist Information in Bangkok',
+          link: 'https://www.tourismthailand.org/home',
+          type: 'web'
         },
         {
-          name: 'กฎ กติกา การแข่งขัน',
-          link: ''
+          name: '',
+          link: '../assets/',
+          type: 'pdf'
         },
         {
-          name: 'ตารางการแข่งขัน',
-          link: ''
+          name: 'Event Program',
+          link: '',
+          type: 'pdf'
         }
       ]
     }
