@@ -132,10 +132,8 @@
 
       <v-col cols="8">
         <li :key="item.name" v-for="item in pdfs">
-          <a class="caption" v-if="item.type=== 'web'" :href="item.link" target="blank">{{item.name}}</a>
+          <a class="caption" :href="item.link" target="blank">{{item.name}}</a>
         </li>
-          <a  class="caption" href="/public/Rules-Regulations-Asia-Oceania-Cup.pdf"
-          download="Rules-Regulations-Asia-Oceania-Cup.pdf">Rules & Regulations</a>
       </v-col>
     </v-row>
   </v-container>
@@ -143,12 +141,10 @@
 
 <script>
 import dataFeed from '../assets/mixins/data'
-import pdf from 'vue-pdf'
 const DialogConfirm = () => import('../components/DialogConfirm')
 export default {
   components: {
-    DialogConfirm,
-    pdf: PDFViewer
+    DialogConfirm
   },
   data () {
     return {
@@ -171,18 +167,15 @@ export default {
       pdfs: [
         {
           name: 'Tourist Information in Bangkok',
-          link: 'https://www.tourismthailand.org/home',
-          type: 'web'
+          link: 'https://www.tourismthailand.org/home'
         },
         {
-          name: '',
-          link: '../assets/',
-          type: 'pdf'
+          name: 'Rules & Regulations',
+          link: 'https://firebasestorage.googleapis.com/v0/b/football-internal.appspot.com/o/Rules-Regulations-Asia-Oceania-Cup.pdf?alt=media&token=4e2ef238-bafb-4a87-bcc6-243d06c5ef3f'
         },
         {
           name: 'Event Program',
-          link: '',
-          type: 'pdf'
+          link: 'https://firebasestorage.googleapis.com/v0/b/football-internal.appspot.com/o/Tipco-draw-2019.pdf?alt=media&token=7139c17f-f0e0-48aa-a2d5-4d211973f33a'
         }
       ]
     }
