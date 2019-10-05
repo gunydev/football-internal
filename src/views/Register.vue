@@ -203,6 +203,10 @@ export default {
           name: 'Schedule',
           link:
             'https://firebasestorage.googleapis.com/v0/b/football-internal.appspot.com/o/Schedule.jpg?alt=media&token=e0a756d7-ee6b-455f-b2f8-c595a419423a'
+        },
+        {
+          name: 'Score',
+          link: ''
         }
       ]
     }
