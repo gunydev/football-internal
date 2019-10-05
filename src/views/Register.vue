@@ -181,19 +181,28 @@ export default {
         },
         {
           name: 'Match schedule group A',
-          link: 'https://firebasestorage.googleapis.com/v0/b/football-internal.appspot.com/o/A.jpg?alt=media&token=35b9650a-cfa1-4f04-80f9-ead3560a73dc'
+          link:
+            'https://firebasestorage.googleapis.com/v0/b/football-internal.appspot.com/o/A.jpg?alt=media&token=35b9650a-cfa1-4f04-80f9-ead3560a73dc'
         },
         {
           name: 'Match schedule group B',
-          link: 'https://firebasestorage.googleapis.com/v0/b/football-internal.appspot.com/o/B.jpg?alt=media&token=10139b19-8c76-4861-ab59-fac46c37e3f3'
+          link:
+            'https://firebasestorage.googleapis.com/v0/b/football-internal.appspot.com/o/B.jpg?alt=media&token=10139b19-8c76-4861-ab59-fac46c37e3f3'
         },
         {
           name: 'Match schedule group C',
-          link: 'https://firebasestorage.googleapis.com/v0/b/football-internal.appspot.com/o/C.jpg?alt=media&token=00050cf2-cb6e-4af1-b759-49ae996c0c40'
+          link:
+            'https://firebasestorage.googleapis.com/v0/b/football-internal.appspot.com/o/C.jpg?alt=media&token=00050cf2-cb6e-4af1-b759-49ae996c0c40'
         },
         {
           name: 'Match schedule group D',
-          link: 'https://firebasestorage.googleapis.com/v0/b/football-internal.appspot.com/o/D.jpg?alt=media&token=a679a8d0-079d-4f2d-ab8c-aed2221989a5'
+          link:
+            'https://firebasestorage.googleapis.com/v0/b/football-internal.appspot.com/o/D.jpg?alt=media&token=a679a8d0-079d-4f2d-ab8c-aed2221989a5'
+        },
+        {
+          name: 'Schedule',
+          link:
+            'https://firebasestorage.googleapis.com/v0/b/football-internal.appspot.com/o/Schedule.jpg?alt=media&token=e0a756d7-ee6b-455f-b2f8-c595a419423a'
         }
       ]
     }
