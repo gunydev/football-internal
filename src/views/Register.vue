@@ -206,7 +206,7 @@ export default {
         },
         {
           name: 'Score',
-          link: ''
+          link: 'https://firebasestorage.googleapis.com/v0/b/football-internal.appspot.com/o/score.pdf?alt=media&token=419ec61f-0fe1-4512-a789-c7fd53b1a5dc'
         }
       ]
     }
